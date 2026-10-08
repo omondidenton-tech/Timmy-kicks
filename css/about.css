@@ -1,0 +1,738 @@
+/*LOGO*/
+.logo h1{
+    font-size:34px;
+    font-weight:800;
+    color:var(--primary);
+    letter-spacing:1px;
+}
+.logo span{
+    color:var(--accent);
+}
+
+/*NAVIGATION LINKS*/
+.nav-links{
+    display:flex;
+    gap:35px;
+    padding-right:230px;
+}
+
+.nav-links li a{
+    position:relative;
+    font-size:17px;
+    font-weight:600;
+    transition:var(--transition);
+}
+
+.nav-links li a:hover{
+    color:var(--accent);
+}
+
+.nav-links li a::after{
+    content:"";
+    position:absolute;
+    bottom:-8px;
+    left:0;
+    width:0;
+    height:3px;
+    background:var(--accent);
+    transition:.3s;
+}
+
+.nav-links li a:hover::after{
+    width:100%;
+}
+
+.active{
+    color:var(--accent);
+}
+
+.about-hero{
+position:relative;
+height:75vh;
+display:flex;
+align-items:center;
+justify-content:center;
+background:url("../images/banners/about-banner.jpg") center/cover no-repeat;
+overflow:hidden;
+}
+
+.about-hero .overlay{
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:linear-gradient(rgba(0,0,0,.9),rgba(0,0,0,.95));
+}
+
+.about-hero-content{
+position:relative;
+z-index:2;
+width:90%;
+max-width:1200px;
+color:#fff;
+text-align:center;
+animation:fadeUp 1s ease;
+}
+
+.small-title{
+display:inline-block;
+padding:8px 18px;
+background:rgba(212,175,55,.15);
+border:1px solid rgba(212,175,55,.4);
+color:var(--gold);
+font-size:14px;
+font-weight:600;
+letter-spacing:2px;
+border-radius:30px;
+margin-bottom:20px;
+}
+
+.about-hero h1{
+font-size:62px;
+line-height:1.15;
+margin-bottom:25px;
+}
+
+.about-hero p{
+max-width:720px;
+margin:auto;
+font-size:18px;
+line-height:1.8;
+color:#fcf8f8;
+}
+
+.hero-buttons{
+margin-top:35px;
+display:flex;
+justify-content:center;
+gap:20px;
+flex-wrap:wrap;
+}
+
+.btn-outline,.btn{
+display:inline-block;
+padding:15px 35px;
+border:2px solid var(--gold);
+border-radius:50px;
+transition:.35s;
+background:var(--gold);
+color:#111;
+font-weight:600;
+background-color: #ddd;
+}
+
+.btn-outline:hover{
+background:var(--gold);
+color:#22e609;
+}
+
+.breadcrumb{
+padding:18px 8%;
+background:#fafafa;
+border-bottom:1px solid #eee;
+}
+
+.breadcrumb .container{
+display:flex;
+align-items:center;
+gap:10px;
+font-size:15px;
+}
+
+.breadcrumb a{
+font-weight:600;
+transition:.3s;
+}
+
+.breadcrumb a:hover{
+color:var(--gold);
+}
+
+/*OUR STORY*/
+
+.about-story{
+padding:10px 2%;
+background:#fff;
+}
+
+.section-title{
+text-align:center;
+margin-bottom:10px;
+}
+
+.section-title h2{
+font-size:42px;
+margin-bottom:15px;
+color:#111;
+}
+
+.section-title p{
+max-width:650px;
+margin:auto;
+color:#666;
+line-height:1.8;
+}
+
+.story-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:20px;
+align-items:center;
+}
+
+.story-image{
+overflow:hidden;
+border-radius:20px;
+box-shadow:0 20px 50px rgba(0,0,0,.15);
+}
+
+.story-image img{
+width:100%;
+height:520px;
+object-fit:cover;
+transition:.5s;
+}
+
+.story-image:hover img{
+transform:scale(1.08);
+}
+
+.story-text h3{
+font-size:34px;
+margin-bottom:5px;
+}
+
+.story-text p{
+margin-bottom:20px;
+line-height:2.3;
+color:#555;
+}
+
+/*ANIMATION*/
+
+@keyframes fadeUp{
+from{
+opacity:0;
+transform:translateY(40px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+/*MISSION & VISION*/
+
+.mission-vision{
+padding:90px 8%;
+background:#f8f8f8;
+}
+
+.mv-grid{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:35px;
+}
+
+.mv-card{
+background:#fff;
+padding:40px;
+border-radius:20px;
+text-align:center;
+box-shadow:0 15px 35px rgba(0,0,0,.08);
+transition:.35s;
+}
+
+.mv-card:hover{
+transform:translateY(-10px);
+box-shadow:0 25px 45px rgba(0,0,0,.15);
+}
+
+.mv-icon{
+width:80px;
+height:80px;
+margin:0 auto 25px;
+border-radius:50%;
+background:var(--gold);
+display:flex;
+align-items:center;
+justify-content:center;
+}
+
+.mv-icon i{
+font-size:34px;
+color:#111;
+}
+
+.mv-card h3{
+margin-bottom:18px;
+font-size:28px;
+}
+
+.mv-card p{
+line-height:1.8;
+color:#666;
+}
+
+/*STATISTICS*/
+
+.about-stats{
+padding:90px 8%;
+background:#111;
+color:#fff;
+}
+
+.stats-grid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:30px;
+}
+
+.stat-card{
+padding:35px;
+text-align:center;
+background:rgba(255,255,255,.05);
+border:1px solid rgba(255,255,255,.08);
+border-radius:18px;
+transition:.35s;
+}
+
+.stat-card:hover{
+background:var(--gold);
+color:#111;
+transform:translateY(-10px);
+}
+
+.stat-card h2{
+font-size:52px;
+margin-bottom:10px;
+}
+
+.stat-card p{
+font-size:17px;
+font-weight:500;
+}
+
+/*CORE VALUES*/
+.core-values{
+padding:20px 8%;
+background:#fff;
+}
+
+.values-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:30px;
+}
+
+.value-card{
+padding:35px;
+text-align:center;
+border-radius:20px;
+background:#fafafa;
+box-shadow:0 12px 30px rgba(0,0,0,.08);
+transition:.35s;
+}
+
+.value-card:hover{
+transform:translateY(-10px);
+background:#111;
+color:#fff;
+}
+
+.value-card i{
+font-size:48px;
+color:var(--gold);
+margin-bottom:20px;
+}
+
+.value-card h3{
+margin-bottom:15px;
+font-size:24px;
+}
+
+.value-card p{
+line-height:1.8;
+color:#666;
+}
+
+.value-card:hover p{
+color:#ddd;
+}
+/*WHY CHOOSE US*/
+.why-about{
+padding:20px 8%;
+background:#f7f7f7;
+}
+
+.why-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:30px;
+}
+
+.why-box{
+padding:35px;
+background:#fff;
+border-radius:20px;
+text-align:center;
+box-shadow:0 12px 30px rgba(0,0,0,.08);
+transition:.35s;
+}
+
+.why-box:hover{
+background:#111;
+transform:translateY(-10px);
+}
+
+.why-box i{
+font-size:48px;
+color:var(--gold);
+margin-bottom:20px;
+}
+
+.why-box h3{
+margin-bottom:15px;
+font-size:24px;
+transition:.3s;
+}
+
+.why-box p{
+line-height:1.8;
+color:#666;
+transition:.3s;
+}
+
+.why-box:hover h3,
+.why-box:hover p{
+color:#fff;
+}
+/*FEATURED BRANDS*/
+
+.featured-brands{
+padding:30px 8%;
+background:#fff;
+}
+
+.brand-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(170px,1fr));
+gap:30px;
+margin-top:50px;
+}
+
+.brand-card{
+background:#fff;
+padding:35px;
+border-radius:18px;
+display:flex;
+justify-content:center;
+align-items:center;
+box-shadow:0 15px 35px rgba(0,0,0,.08);
+transition:.35s;
+overflow:hidden;
+}
+
+.brand-card img{
+height:70px;
+object-fit:contain;
+transition:.4s;
+}
+
+.brand-card:hover{
+background:#111;
+transform:translateY(-10px);
+}
+
+.brand-card:hover img{
+transform:scale(1.15);
+}
+
+/*STORE GALLERY*/
+.store-gallery{
+padding:20px 8%;
+background:#f7f7f7;
+}
+
+.gallery-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:25px;
+margin-top:45px;
+}
+
+.gallery-grid img{
+height:260px;
+border-radius:18px;
+object-fit:cover;
+transition:.4s;
+cursor:pointer;
+box-shadow:0 15px 30px rgba(0,0,0,.12);
+}
+
+.gallery-grid img:hover{
+transform:scale(1.05);
+}
+
+/*CTA*/
+.about-cta{
+padding:50px 8%;
+text-align:center;
+background:linear-gradient(rgba(0,0,0,.78),rgba(0,0,0,.78)),url("../images/banners/cta-bg.jpg");
+background-size:cover;
+background-position:center;
+background-attachment:fixed;
+color:#fff;
+}
+
+.about-cta h2{
+font-size:46px;
+margin-bottom:20px;
+}
+
+.about-cta p{
+max-width:400px;
+margin:auto;
+line-height:1.8;
+color:#ddd;
+margin-bottom:40px;
+}
+
+.cta-buttons{
+display:flex;
+justify-content:center;
+gap:20px;
+flex-wrap:wrap;
+}
+
+/*NEWSLETTER*/
+
+.newsletter{
+padding:50px 8%;
+background:#fff;
+}
+
+.newsletter .container{
+max-width:900px;
+background:#111;
+padding:60px;
+border-radius:22px;
+text-align:center;
+box-shadow:0 20px 45px rgba(0,0,0,.15);
+}
+
+.newsletter h2{
+font-size:38px;
+color:#fff;
+margin-bottom:15px;
+}
+
+.newsletter p{
+color:#ddd;
+margin-bottom:35px;
+line-height:1.8;
+}
+
+.newsletter form{
+display:flex;
+justify-content:center;
+gap:15px;
+flex-wrap:wrap;
+}
+
+.newsletter input{
+flex:1;
+min-width:260px;
+padding:18px 22px;
+border:none;
+outline:none;
+border-radius:50px;
+font-size:16px;
+}
+
+.newsletter input:focus{
+box-shadow:0 0 0 4px rgba(212,175,55,.35);
+}
+
+.newsletter button{
+padding:18px 40px;
+border:none;
+border-radius:50px;
+background:var(--gold);
+font-weight:700;
+cursor:pointer;
+transition:.35s;
+background-color: rgb(252, 249, 249);
+}
+
+.newsletter button:hover{
+background:#ee0303;
+transform:translateY(-4px);
+}
+
+/*PAYMENT ICONS*/
+.payment-icons{
+margin-top:35px;
+display:flex;
+justify-content:center;
+gap:18px;
+flex-wrap:wrap;
+}
+
+.payment-icons img{
+height:40px;
+transition:.3s;
+}
+
+.payment-icons img:hover{
+transform:scale(1.1);
+}
+
+/*TRUST BADGES*/
+.trust-row{
+display:flex;
+justify-content:center;
+gap:35px;
+margin-top:40px;
+flex-wrap:wrap;
+}
+
+.trust-item{
+display:flex;
+align-items:center;
+gap:10px;
+color:#fff;
+font-weight:500;
+}
+
+.trust-item i{
+color:var(--gold);
+font-size:22px;
+}
+
+/*FOOTER*/
+footer{
+background:#0b0b0b;
+color:#fff;
+padding:80px 8% 25px;
+}
+
+.footer-container{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+gap:45px;
+max-width:1300px;
+margin:auto;
+}
+
+.footer-column h2{
+font-size:30px;
+margin-bottom:20px;
+}
+
+.footer-column h2 span{
+color:var(--gold);
+}
+
+.footer-column h3{
+font-size:22px;
+margin-bottom:18px;
+}
+
+.footer-column p{
+color:#c8c8c8;
+line-height:1.8;
+margin-bottom:15px;
+}
+
+.footer-column ul{
+list-style:none;
+padding:0;
+}
+
+.footer-column li{
+margin-bottom:12px;
+}
+
+.footer-column a{
+transition:.3s;
+}
+
+.footer-column a:hover{
+color:var(--gold);
+padding-left:8px;
+}
+
+.social-links{
+display:flex;
+gap:15px;
+margin-top:20px;
+}
+
+.social-links a{
+width:45px;
+height:45px;
+display:flex;
+justify-content:center;
+align-items:center;
+background:#1c1c1c;
+border-radius:50%;
+transition:.35s;
+}
+
+.social-links a:hover{
+background:var(--gold);
+color:#111;
+transform:translateY(-6px);
+}
+
+.footer-bottom{
+margin-top:55px;
+padding-top:25px;
+text-align:center;
+border-top:1px solid rgba(255,255,255,.08);
+color:#bbb;
+font-size:15px;
+}
+
+/*RESPONSIVE*/
+@media(max-width:992px){
+.gallery-grid{
+grid-template-columns:repeat(2,1fr);
+}
+.footer-container{
+grid-template-columns:repeat(2,1fr);
+}
+}
+
+@media(max-width:768px){
+.gallery-grid,
+.footer-container{
+grid-template-columns:1fr;
+}
+.newsletter .container{
+padding:40px 25px;
+}
+.newsletter form{
+flex-direction:column;
+}
+.newsletter input,
+.newsletter button{
+width:100%;
+}
+.about-cta h2{
+font-size:34px;
+}
+}
+
+@media(max-width:500px){
+.brand-grid{
+grid-template-columns:1fr;
+}
+.gallery-grid img{
+height:220px;
+}
+.newsletter h2{
+font-size:30px;
+}
+}

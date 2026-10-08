@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Timmy Kicks | Secure Checkout</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<link rel="stylesheet" href="css/style.css">
+
+<link rel="stylesheet" href="css/checkout.css">
+
+<link rel="stylesheet" href="css/responsive.css">
+
+</head>
+
+<body>
+
+<header class="topbar">
+
+<div class="announcement-bar">
+
+<p>
+
+🚚 Nationwide Delivery • ⭐ Premium Sneakers • 💳 Secure M-Pesa Payments • 📱 WhatsApp Orders 0111711126
+
+</p>
+
+</div>
+
+<nav class="navbar container">
+
+<a href="index.html" class="logo">
+<h1>Timmy <span>Kicks</span></h1>
+</a>
+
+<button class="menu-toggle" aria-label="Open Navigation">
+
+<span></span>
+
+<span></span>
+
+<span></span>
+
+</button>
+
+<ul class="nav-links">
+
+<li><a href="index.html">Home</a></li>
+
+<li><a href="products.html">Products</a></li>
+
+<li><a href="about.html">About</a></li>
+
+<li><a href="contact.html">Contact</a></li>
+
+<li><a class="active" href="checkout.html">Checkout</a></li>
+
+</ul>
+
+<div class="nav-actions">
+
+<button id="themeToggle" class="theme-toggle" aria-label="Toggle Theme">
+
+<i class="fas fa-moon"></i>
+
+</button>
+
+<a href="cart.html" class="icon-link">
+
+<i class="fas fa-shopping-bag"></i>
+
+<span class="cart-badge" id="cartCount">0</span>
+
+</a>
+
+</div>
+
+</nav>
+
+</header>
+
+<main class="checkout-page container">
+
+<section class="checkout-hero glass-card">
+
+<p class="eyebrow">
+
+Secure Checkout
+
+</p>
+
+<h1>
+
+Complete Your Order
+
+</h1>
+
+<p>
+
+You're only one step away from receiving your favourite sneakers. Fill in your delivery details below and we'll prepare your order immediately.
+
+</p>
+
+<div class="checkout-features">
+
+<div>
+
+<i class="fas fa-lock"></i>
+
+<span>Secure Checkout</span>
+
+</div>
+
+<div>
+
+<i class="fas fa-truck-fast"></i>
+
+<span>Fast Delivery</span>
+
+</div>
+
+<div>
+
+<i class="fas fa-shield-halved"></i>
+
+<span>Quality Guaranteed</span>
+
+</div>
+
+</div>
+
+</section>
+
+<div class="checkout-layout">
+
+<form id="checkoutForm" class="checkout-form glass-card" novalidate>
+
+<h2>
+
+Customer Information
+
+</h2>
+
+<p class="form-intro">
+
+Please provide accurate delivery information to ensure your order reaches you without delays.
+
+</p>
+
+<div class="form-grid">
+
+<div class="field-group">
+
+<label for="fullName">
+
+Full Name
+
+</label>
+
+<input
+
+type="text"
+
+id="fullName"
+
+name="fullName"
+
+placeholder="John Doe"
+
+required>
+
+</div>
+
+<div class="field-group">
+
+<label for="phoneNumber">
+
+Phone Number
+
+</label>
+
+<input
+
+type="tel"
+
+id="phoneNumber"
+
+name="phoneNumber"
+
+placeholder="07XXXXXXXX"
+
+required>
+
+</div>
+
+<div class="field-group">
+
+<label for="email">
+
+Email Address
+
+</label>
+
+<input
+
+type="email"
+
+id="email"
+
+name="email"
+
+placeholder="example@email.com"
+
+required>
+
+</div>
+
+<div class="field-group">
+
+<label for="county">
+
+County
+
+</label>
+
+<input
+
+type="text"
+
+id="county"
+
+name="county"
+
+placeholder="Nairobi"
+
+required>
+
+</div>
+
+<div class="field-group">
+
+<label for="town">
+
+Town / Estate
+
+</label>
+
+<input
+
+type="text"
+
+id="town"
+
+name="town"
+
+placeholder="Westlands"
+
+required>
+
+</div>
+
+<div class="field-group">
+
+<label for="address">
+
+Street Address
+
+</label>
+
+<input
+
+type="text"
+
+id="address"
+
+name="address"
+
+placeholder="Apartment, Building or House Number"
+
+required>
+
+</div>
+
+<div class="field-group full-width">
+
+<label for="deliveryNotes">
+
+Delivery Notes
+
+</label>
+
+<textarea
+
+id="deliveryNotes"
+
+name="deliveryNotes"
+
+rows="5"
+
+placeholder="Optional instructions for the rider..."></textarea>
+
+</div>
+
+<div class="field-group full-width">
+
+<label for="paymentMethod">
+
+Payment Method
+
+</label>
+
+<select
+
+id="paymentMethod"
+
+name="paymentMethod"
+
+required>
+
+<option value="">
+
+Select Payment Method
+
+</option>
+
+<option value="mpesa">
+
+M-Pesa
+
+</option>
+
+<option value="cash">
+
+Cash on Delivery
+
+</option>
+
+</select>
+
+</div>
+
+</div>
+
+<div id="formError" class="error-box"></div>
+
+<div class="checkout-security">
+
+<div class="security-item">
+
+<i class="fas fa-lock"></i>
+
+<div>
+
+<strong>Secure Payments</strong>
+
+<p>Your personal information is protected.</p>
+
+</div>
+
+</div>
+
+<div class="security-item">
+
+<i class="fas fa-headset"></i>
+
+<div>
+
+<strong>Customer Support</strong>
+
+<p>Need help? Contact us anytime.</p>
+
+</div>
+
+</div>
+
+<div class="security-item">
+
+<i class="fas fa-truck"></i>
+
+<div>
+
+<strong>Fast Delivery</strong>
+
+<p>Nationwide delivery across Kenya.</p>
+
+</div>
+
+</div>
+
+</div>
+
+<button
+
+type="submit"
+
+class="btn btn-primary btn-block">
+
+<i class="fas fa-credit-card"></i>
+
+Continue to Payment
+
+</button>
+
+</form>
+<aside class="checkout-summary glass-card">
+
+<h2>Order Summary</h2>
+
+<p class="summary-text">
+
+Review your order before completing your purchase.
+
+</p>
+
+<div id="checkoutSummaryItems">
+
+</div>
+
+<div class="summary-divider"></div>
+
+<div class="summary-row">
+
+<span>Subtotal</span>
+
+<strong id="checkoutSubtotal">KES 0</strong>
+
+</div>
+
+<div class="summary-row">
+
+<span>Shipping</span>
+
+<strong id="checkoutShipping">FREE</strong>
+
+</div>
+
+<div class="summary-row total-row">
+
+<span>Total</span>
+
+<strong id="checkoutTotal">KES 0</strong>
+
+</div>
+
+<div class="delivery-info">
+
+<div class="delivery-item">
+
+<i class="fas fa-truck-fast"></i>
+
+<div>
+
+<strong>Estimated Delivery</strong>
+
+<p>1–3 Business Days</p>
+
+</div>
+
+</div>
+
+<div class="delivery-item">
+
+<i class="fas fa-location-dot"></i>
+
+<div>
+
+<strong>Delivery Coverage</strong>
+
+<p>Nationwide Across Kenya</p>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="payment-instructions hidden" id="paymentInstructions">
+
+<h3>
+
+<i class="fas fa-mobile-screen-button"></i>
+
+M-Pesa Payment Instructions
+
+</h3>
+
+<div class="payment-box">
+
+<p class="payment-title">
+
+Send Payment To
+
+</p>
+
+<div class="pay-number">
+
+0111711126
+
+</div>
+
+<p>
+
+Complete your payment using the number above.
+
+</p>
+
+</div>
+
+<div class="payment-note">
+
+<p>
+
+<i class="fas fa-circle-check"></i>
+
+After completing your payment, keep your M-Pesa confirmation message.
+
+</p>
+
+<p>
+
+<i class="fas fa-circle-check"></i>
+
+Click the button below to send your order via WhatsApp.
+
+</p>
+
+<p>
+
+<i class="fas fa-circle-check"></i>
+
+Our team will verify your payment and begin processing your order immediately.
+
+</p>
+
+</div>
+
+<button
+type="button"
+id="confirmOrder"
+class="btn btn-primary btn-block">
+
+<i class="fab fa-whatsapp"></i>
+
+Send Order via WhatsApp
+
+</button>
+
+</div>
+
+<div class="checkout-guarantee">
+
+<h3>Why Shop With Timmy Kicks?</h3>
+
+<div class="guarantee-list">
+
+<div class="guarantee-item">
+
+<i class="fas fa-shield-halved"></i>
+
+<div>
+
+<strong>100% Genuine Products</strong>
+
+<p>Premium sneakers sourced from trusted suppliers.</p>
+
+</div>
+
+</div>
+
+<div class="guarantee-item">
+
+<i class="fas fa-credit-card"></i>
+
+<div>
+
+<strong>Secure Payments</strong>
+
+<p>Safe M-Pesa and Cash on Delivery options.</p>
+
+</div>
+
+</div>
+
+<div class="guarantee-item">
+
+<i class="fas fa-rotate-left"></i>
+
+<div>
+
+<strong>Easy Exchanges</strong>
+
+<p>Quick assistance for size exchanges where applicable.</p>
+
+</div>
+
+</div>
+
+<div class="guarantee-item">
+
+<i class="fas fa-headset"></i>
+
+<div>
+
+<strong>Customer Support</strong>
+
+<p>Friendly support before and after every purchase.</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="accepted-payments">
+
+<h3>Accepted Payments</h3>
+
+<div class="payment-icons">
+
+<div class="payment-card">
+
+<i class="fas fa-mobile-alt"></i>
+
+<span>M-Pesa</span>
+
+</div>
+
+<div class="payment-card">
+
+<i class="fas fa-money-bill-wave"></i>
+
+<span>Cash on Delivery</span>
+
+</div>
+
+</div>
+
+</div>
+
+</aside>
+
+</div>
+
+</main>
+
+<footer class="site-footer">
+
+<div class="container">
+
+<div class="footer-grid">
+
+<div>
+
+<h3>Timmy Kicks</h3>
+
+<p>
+
+Premium sneakers and streetwear designed for those who value quality, comfort and style.
+
+</p>
+
+</div>
+
+<div>
+
+<h3>Quick Links</h3>
+
+<ul>
+
+<li><a href="index.html">Home</a></li>
+
+<li><a href="products.html">Products</a></li>
+
+<li><a href="about.html">About</a></li>
+
+<li><a href="contact.html">Contact</a></li>
+
+<li><a href="faq.html">FAQ</a></li>
+
+</ul>
+
+</div>
+
+<div>
+
+<h3>Follow Us</h3>
+
+<div class="social-icons">
+
+<a href="#"><i class="fab fa-facebook-f"></i></a>
+
+<a href="#"><i class="fab fa-instagram"></i></a>
+
+<a href="#"><i class="fab fa-tiktok"></i></a>
+
+<a href="#"><i class="fab fa-whatsapp"></i></a>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="footer-bottom">
+
+<p>
+
+© <span id="currentYear"></span> Timmy Kicks. All Rights Reserved.
+
+</p>
+
+</div>
+
+</div>
+
+</footer>
+
+<button
+id="backToTop"
+class="back-to-top"
+aria-label="Back to Top">
+
+<i class="fas fa-arrow-up"></i>
+
+</button>
+
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+<script>
+emailjs.init("BkIv27ZwAOTt0cJNa");
+</script>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+<script>
+emailjs.init({
+    publicKey:"BkIv27ZwAOTt0cJNa"
+});
+</script>
+<script src="js/products.js"></script>
+<script src="js/cart.js"></script>
+<script src="js/validation.js"></script>
+<script src="js/whatsapp.js"></script>
+<script src="js/email.js"></script>
+<script src="js/checkout.js"></script>
+<script src="js/main.js"></script>
+
+</body>
+</html>

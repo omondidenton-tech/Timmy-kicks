@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Shopping Cart | Timmy Kicks">
+<title>Shopping Cart | Timmy Kicks</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/cart.css">
+<link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body>
+<div class="announcement-bar">
+<p>
+
+🚚Delivery is nationwide | Free Delivery in Thika & Nairobi |
+ Original Sneakers | WhatsApp Orders: 0111711126
+
+</p>
+
+</div>
+
+<header>
+
+<nav class="navbar">
+
+<div class="logo">
+
+<a href="index.html">
+
+<h1>Timmy <span>Kicks</span></h1>
+
+</a>
+
+</div>
+
+<ul class="nav-links">
+<li><a href="index.html">Home</a></li>
+<li><a href="products.html">Products</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="contact.html">Contact</a></li>
+<li><a href="faq.html">FAQ</a></li>
+</ul>
+
+<div class="nav-icons">
+
+<a href="cart.html" class="active">
+
+<i class="fas fa-shopping-cart"></i>
+
+<span id="cart-count">0</span>
+
+</a>
+
+<a href="https://wa.me/254111711126" target="_blank">
+
+<i class="fab fa-whatsapp"></i>
+
+</a>
+
+<div class="menu-btn">
+
+<i class="fas fa-bars"></i>
+
+</div>
+
+</div>
+
+</nav>
+
+</header>
+
+<!-- Hero -->
+
+<section class="cart-hero">
+
+<div class="overlay"></div>
+
+<div class="hero-content">
+
+<p class="small-title">
+
+YOUR SHOPPING CART
+
+</p>
+
+<h1>
+
+Review Your Order
+
+</h1>
+
+<p>
+
+Check your selected products before proceeding to secure checkout.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- Breadcrumb -->
+
+<section class="breadcrumb">
+
+<div class="container">
+
+<a href="index.html">Home</a>
+
+<span>/</span>
+
+<span>Shopping Cart</span>
+
+</div>
+
+</section>
+
+<!-- Cart -->
+
+<section class="cart-section">
+
+<div class="container">
+
+<div class="section-title">
+
+<h2>Your Cart</h2>
+
+<p>
+
+Review, update quantities or remove products before checkout.
+
+</p>
+
+</div>
+
+<div class="cart-wrapper">
+
+<div class="cart-table">
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Product</th>
+
+<th>Price</th>
+
+<th>Quantity</th>
+
+<th>Total</th>
+
+<th>Remove</th>
+
+</tr>
+
+</thead>
+
+<tbody id="cartItems">
+
+<!-- Cart items will be loaded here by cart.js -->
+
+</tbody>
+
+</table>
+
+<div id="emptyCart" class="empty-cart" style="display:none;">
+
+<i class="fas fa-shopping-basket"></i>
+
+<h3>Your cart is empty</h3>
+
+<p>
+
+Looks like you haven't added any products yet.
+
+</p>
+
+<a href="products.html" class="btn">
+
+Continue Shopping
+
+</a>
+
+</div>
+
+</div>
+
+<div class="cart-summary">
+
+<div class="summary-card">
+
+<h3>Order Summary</h3>
+
+<div class="summary-row">
+
+<span>Subtotal</span>
+
+<span id="subtotal">KES 0</span>
+
+</div>
+
+<div class="summary-row">
+
+<span>Delivery</span>
+
+<span id="delivery">FREE</span>
+
+</div>
+
+<div class="summary-row">
+
+<span>Discount</span>
+
+<span id="discount">KES 0</span>
+
+</div>
+
+<hr>
+
+<div class="summary-row total-row">
+
+<strong>Total</strong>
+
+<strong id="grandTotal">KES 0</strong>
+
+</div>
+
+<div class="coupon-box">
+
+<label for="coupon">
+
+Promo Code
+
+</label>
+
+<div class="coupon-input">
+
+<input
+type="text"
+id="coupon"
+placeholder="Enter promo code">
+
+<button
+type="button"
+id="applyCoupon">
+
+Apply
+
+</button>
+
+</div>
+
+<small id="couponMessage"></small>
+
+</div>
+
+<div class="summary-buttons">
+
+<a href="products.html" class="continue-btn">
+
+<i class="fas fa-arrow-left"></i>
+
+Continue Shopping
+
+</a>
+
+<a href="checkout.html" class="checkout-btn">
+
+Proceed to Checkout
+
+<i class="fas fa-arrow-right"></i>
+
+</a>
+
+</div>
+
+<div class="secure-payment">
+
+<div>
+
+<i class="fas fa-lock"></i>
+
+Secure Checkout
+
+</div>
+
+<div>
+
+<i class="fas fa-shield-alt"></i>
+
+Safe Payments
+
+</div>
+
+<div>
+
+<i class="fas fa-truck"></i>
+
+Fast Delivery
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="delivery-section">
+
+<div class="container">
+
+<div class="section-title">
+
+<h2>Delivery Information</h2>
+
+<p>
+
+Fast, reliable and secure delivery across Kenya.
+
+</p>
+
+</div>
+
+<div class="delivery-grid">
+
+<div class="delivery-card">
+
+<i class="fas fa-truck-fast"></i>
+
+<h3>Free Delivery</h3>
+
+<p>
+
+Free delivery within Nairobi and Thika.
+
+</p>
+
+</div>
+
+<div class="delivery-card">
+
+<i class="fas fa-box"></i>
+
+<h3>Nationwide Shipping</h3>
+
+<p>
+
+We deliver to all counties in Kenya.
+
+</p>
+
+</div>
+
+<div class="delivery-card">
+
+<i class="fas fa-clock"></i>
+
+<h3>Fast Processing</h3>
+
+<p>
+
+Orders confirmed within a few hours.
+
+</p>
+
+</div>
+
+<div class="delivery-card">
+
+<i class="fas fa-headset"></i>
+
+<h3>Customer Support</h3>
+
+<p>
+
+We're available on WhatsApp whenever you need assistance.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section class="payments">
+
+<div class="container">
+
+<div class="section-title">
+
+<h2>Accepted Payment Methods</h2>
+
+<p>
+
+Simple and secure payment options.
+
+</p>
+
+</div>
+
+<div class="payment-grid">
+
+<div class="payment-card">
+
+<img src="images/payments/mpesa.png" alt="M-Pesa">
+
+<h4>M-Pesa</h4>
+
+</div>
+
+<div class="payment-card">
+
+<img src="images/payments/visa.png" alt="Visa">
+
+<h4>Visa</h4>
+
+</div>
+
+<div class="payment-card">
+
+<img src="images/payments/mastercard.png" alt="MasterCard">
+
+<h4>MasterCard</h4>
+
+</div>
+
+<div class="payment-card">
+
+<img src="images/payments/cash.png" alt="Cash">
+
+<h4>Cash on Delivery*</h4>
+
+</div>
+
+</div>
+
+<p class="payment-note">
+
+*Cash on Delivery is available in selected locations.</p>
+
+</div>
+
+</section>
+
+<section class="recommended-products">
+
+<div class="container">
+
+<div class="section-title">
+
+<h2>You May Also Like</h2>
+
+<p>Complete your collection with these customer favourites.</p>
+
+</div>
+
+<div class="recommend-grid">
+
+<div class="recommend-card">
+
+<img src="images/products/nike-airforce1.jpg" alt="Nike Air Force 1">
+
+<h3>Nike Air Force 1</h3>
+
+<p>KES 12,500</p>
+
+<a href="product.html" class="btn">View Product</a>
+
+</div>
+
+<div class="recommend-card">
+
+<img src="images/products/jordan4.jpg" alt="Air Jordan 4">
+
+<h3>Air Jordan 4</h3>
+
+<p>KES 18,000</p>
+
+<a href="product.html" class="btn">View Product</a>
+
+</div>
+
+<div class="recommend-card">
+
+<img src="images/products/vans-oldskool.jpg" alt="Vans Old Skool">
+
+<h3>Vans Old Skool</h3>
+
+<p>KES 8,000</p>
+
+<a href="product.html" class="btn">View Product</a>
+
+</div>
+
+<div class="recommend-card">
+
+<img src="images/products/drmartens.jpg" alt="Dr Martens">
+
+<h3>Dr Martens Boots</h3>
+
+<p>KES 15,500</p>
+
+<a href="product.html" class="btn">View Product</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="newsletter">
+
+<div class="container">
+
+<h2>Stay Updated</h2>
+
+<p>Subscribe to receive updates on new arrivals, exclusive discounts and limited sneaker drops.
+
+</p>
+
+<form class="newsletter-form">
+
+<input
+type="email"
+placeholder="Enter your email address"
+required>
+
+<button type="submit">
+
+<i class="fas fa-paper-plane"></i>
+
+Subscribe
+
+</button>
+
+</form>
+
+<div class="payment-icons">
+<img src="images/payments/mpesa.png" alt="M-Pesa">
+<img src="images/payments/visa.png" alt="Visa">
+<img src="images/payments/mastercard.png" alt="MasterCard">
+</div>
+
+</div>
+
+</section>
+
+
+<footer>
+
+<div class="container footer-container">
+
+<div class="footer-column">
+
+<h2>Timmy <span>Kicks</span></h2>
+
+<p>
+
+Premium sneakers, jerseys and sportswear designed for comfort, confidence and style.
+
+</p>
+
+<div class="social-links">
+<a href="#"><i class="fab fa-facebook-f"></i></a>
+<a href="#"><i class="fab fa-instagram"></i></a>
+<a href="#"><i class="fab fa-tiktok"></i></a>
+<a href="https://wa.me/254111711126" target="_blank">
+<i class="fab fa-whatsapp"></i></a>
+</div>
+
+</div>
+
+<div class="footer-column">
+
+<h3>Shop</h3>
+
+<ul>
+<li><a href="products.html">All Products</a></li>
+<li><a href="cart.html">Shopping Cart</a></li>
+<li><a href="checkout.html">Checkout</a></li>
+<li><a href="faq.html">FAQ</a></li>
+</ul>
+
+</div>
+
+<div class="footer-column">
+
+<h3>Customer Care</h3>
+
+<ul>
+<li><a href="contact.html">Contact Us</a></li>
+<li><a href="#">Delivery Policy</a></li>
+<li><a href="#">Returns Policy</a></li>
+<li><a href="#">Privacy Policy</a></li>
+</ul>
+
+</div>
+
+<div class="footer-column">
+<h3>Contact</h3>
+<p><i class="fas fa-phone"></i> 0111711126</p>
+<p><i class="fas fa-envelope"></i> info@timmykicks.co.ke</p>
+<p><i class="fas fa-location-dot"></i> Thika & Nairobi</p>
+<p><i class="fas fa-clock"></i> Mon - Sat | 8:00 AM - 6:00 PM</p>
+</div>
+
+</div>
+
+<div class="footer-bottom">
+
+<p>© 2026 Timmy Kicks. All Rights Reserved.</p>
+
+</div>
+
+</footer>
+
+<button id="scrollTop">
+
+<i class="fas fa-arrow-up"></i>
+
+</button>
+
+<script src="js/script.js"></script>
+<script src="js/cart.js"></script>
+
+</body>
+
+</html>

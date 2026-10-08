@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Products | Timmy Kicks</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+<link rel="stylesheet" href="css/products.css">
+
+<link rel="stylesheet" href="css/responsive.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<header class="topbar">
+<div class="announcement-bar">
+<p>
+🚚 Delivery is Nationwide | FREE Delivery in Nairobi & Thika |
+🔥 New Arrivals Every Week |
+💳 Secure M-Pesa Payments |
+📱 WhatsApp Orders: 0111711126
+</p>
+</div>
+<div class="container navbar">
+
+<div class="logo">
+<h1>Timmy <span>Kicks</span></h1>
+</div>
+
+<ul class="nav-links">
+
+<li><a href="index.html">Home</a></li>
+
+<li><a href="products.html" class="active">Products</a></li>
+
+<li><a href="about.html">About</a></li>
+
+<li><a href="contact.html">Contact</a></li>
+
+<li><a href="faq.html">FAQ</a></li>
+
+<li>
+<a href="cart.html" class="cart-icon">
+<i class="fas fa-shopping-cart"></i>
+<span id="cartCount" class="cart-badge">0</span>
+</a>
+</li>
+
+</ul>
+
+<div class="nav-actions">
+
+<button id="themeToggle" class="theme-toggle">
+<i class="fas fa-moon"></i>
+</button>
+
+<button class="menu-toggle">
+<span></span>
+<span></span>
+<span></span>
+</button>
+
+</div>
+
+</div>
+
+</header>
+
+<section class="products-hero">
+
+<div class="container">
+
+<h1>Premium Sneakers & Jerseys</h1>
+
+<p>Discover authentic sneakers, football jerseys and basketball jerseys selected for comfort, performance and everyday street style.</p>
+
+</div>
+
+</section>
+
+<section class="products-filter">
+
+<div class="container">
+
+<div class="filter-header">
+
+<h2>Our Collection</h2>
+
+<p id="productCount">Showing 24 Products</p>
+
+</div>
+
+<div class="filter-controls">
+
+<input type="text" id="searchInput" placeholder="Search products...">
+
+<select id="brandFilter">
+
+<option value="all">All Brands</option>
+
+<option value="Nike">Nike</option>
+
+<option value="Jordan">Jordan</option>
+
+<option value="Adidas">Adidas</option>
+
+<option value="Puma">Puma</option>
+
+<option value="Converse">Converse</option>
+
+<option value="Vans">Vans</option>
+
+<option value="New Balance">New Balance</option>
+
+<option value="Dr Martens">Dr Martens</option>
+
+</select>
+
+<select id="categoryFilter">
+
+<option value="all">All Categories</option>
+
+<option value="Sneakers">Sneakers</option>
+
+<option value="Football Jersey">Football Jersey</option>
+
+<option value="Basketball Jersey">Basketball Jersey</option>
+
+</select>
+
+<select id="priceFilter">
+
+<option value="all">All Prices</option>
+
+<option value="0-2500">Below KES 2500</option>
+
+<option value="2501-3500">KES 2,501 - 35,000</option>
+
+<option value="3501-4000">KES 3,501 - 4,000</option>
+
+<option value="4001">Above KES 4,000</option>
+
+</select>
+
+<select id="sortFilter">
+
+<option value="default">Sort By</option>
+
+<option value="price-low">Price Low to High</option>
+
+<option value="price-high">Price High to Low</option>
+
+<option value="name">Name A - Z</option>
+
+</select>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="products-section">
+
+<div class="container">
+
+<div id="productGrid" class="products-grid"></div>
+
+<button id="loadMoreBtn" class="btn">
+Load More Products
+</button>
+
+</div>
+
+</div>
+
+</section>
+<section class="newsletter-section">
+
+<div class="container">
+
+<div class="newsletter-wrapper glass-card">
+
+<div class="newsletter-content">
+
+<h2>Stay Updated</h2>
+
+<p>Subscribe to receive new arrivals, exclusive sneaker drops and special offers from Timmy Kicks.</p>
+
+</div>
+
+<form id="newsletterForm" class="newsletter-form">
+
+<input type="email" placeholder="Enter your email address" required>
+
+<button type="submit" class="btn">
+
+<i class="fas fa-paper-plane"></i>
+
+Subscribe
+
+</button>
+
+</form>
+
+</div>
+
+</div>
+
+</section>
+
+<footer class="site-footer">
+
+<div class="container footer-grid">
+
+<div class="footer-about">
+
+<h3>Timmy Kicks</h3>
+
+<p>Your trusted destination for premium sneakers, football jerseys and basketball jerseys in Kenya.</p>
+
+<div class="social-icons">
+
+<a href="#"><i class="fab fa-facebook-f"></i></a>
+
+<a href="#"><i class="fab fa-instagram"></i></a>
+
+<a href="#"><i class="fab fa-tiktok"></i></a>
+
+<a href="https://wa.me/254111711126"><i class="fab fa-whatsapp"></i></a>
+
+</div>
+
+</div>
+
+<div>
+
+<h3>Quick Links</h3>
+
+<ul>
+
+<li><a href="index.html">Home</a></li>
+
+<li><a href="products.html">Products</a></li>
+
+<li><a href="about.html">About</a></li>
+
+<li><a href="contact.html">Contact</a></li>
+
+<li><a href="faq.html">FAQ</a></li>
+
+<li><a href="cart.html">Cart</a></li>
+
+</ul>
+
+</div>
+
+<div>
+
+<h3>Categories</h3>
+
+<ul>
+
+<li><a href="#">Sneakers</a></li>
+
+<li><a href="#">Football Jerseys</a></li>
+
+<li><a href="#">Basketball Jerseys</a></li>
+
+<li><a href="#">New Arrivals</a></li>
+
+<li><a href="#">Best Sellers</a></li>
+
+</ul>
+
+</div>
+
+<div>
+
+<h3>Contact Us</h3>
+
+<ul>
+
+<li><i class="fas fa-phone"></i> +254 111 711 126</li>
+
+<li><i class="fas fa-envelope"></i> info@timmykicks.co.ke</li>
+
+<li><i class="fas fa-location-dot"></i> Nairobi, Kenya</li>
+
+<li><i class="fas fa-clock"></i> Mon - Sat : 8:00 AM - 7:00 PM</li>
+
+</ul>
+
+</div>
+
+</div>
+
+<div class="footer-bottom">
+
+<p>&copy; <span id="currentYear"></span> Timmy Kicks. All Rights Reserved.</p>
+
+</div>
+
+</footer>
+
+<button id="backToTop" class="back-to-top">
+
+<i class="fas fa-arrow-up"></i>
+
+</button>
+
+<script src="js/products.js"></script>
+
+<script src="js/cart.js"></script>
+
+<script src="js/validation.js"></script>
+
+<script src="js/whatsapp.js"></script>
+
+<script src="js/main.js"></script>
+
+</body>
+
+</html>
